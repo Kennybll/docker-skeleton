@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  node:
+    build: .
+    entrypoint: /usr/local/bin/nodeos
+    command: --data-dir /telos/data --config-dir /telos/data --genesis-json genesis.json
+    restart: on-failure
+    ports:
+      - "18888:8888"
+      - "19876:9876"
+    volumes:
+      - ./volumes/data:/telos/data
+      - ./config.ini:/telos/data/config.ini:ro
+      - ./genesis.json:/telos/data/genesis.json:ro
+
