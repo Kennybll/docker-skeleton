@@ -14,3 +14,10 @@ services:
       - ./config.ini:/telos/data/config.ini:ro
       - ./genesis.json:/telos/data/genesis.json:ro
 
+#  mongo:
+#    image: mongo:4
+#    restart: on-failure
+#    environment:
+#      MONGO_INITDB_DATABASE: telos
+#    volumes:
+#      - ./volumes/db:/data/db

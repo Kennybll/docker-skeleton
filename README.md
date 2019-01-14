@@ -65,3 +65,10 @@ Stop the node
 ```
 $ docker-compose stop
 ```
+
+## MongoDB Plugin
+
+If you want to enable the MongoDB plugin you can uncomment the mongo container section on docker-compose(-init).yml files and the mongodb-uri on config.ini.
+
+Note that the service and database name on docker-compose.yml are respectively the host and database to be used on the mongodb-uri.
+
