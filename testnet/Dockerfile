@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 RUN apt update
 
@@ -11,7 +11,7 @@ RUN mkdir -p /telos/src && \
 	cd /telos/src && \
 	git clone https://github.com/Telos-Foundation/telos && \
 	cd telos && \
-	git checkout oak-v1.4.5 && \
+	git checkout oak-v1.6.0-rc && \
 	git submodule update --init --recursive && \
 	./telos_build.sh && \
 	./telos_install.sh
